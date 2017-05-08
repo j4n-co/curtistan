@@ -1,1 +1,9 @@
-content
+# exclude everything
+content/*
+# exception to the rule
+!content/.gitkeep
+
+# exclude everything
+thumbs/*
+# exception to the rule
+!thumbs/.gitkeep
