@@ -1,16 +1,9 @@
 title: Home
 
-pages: false
+pages: true
 
 fields:
   title:
     label: Title
     type:  text
-
-  intro:
-    label: Intro
-    type:  textarea
-
-  text:
-    label: Text
-    type:  textarea
+    width: 5

@@ -1,5 +1,5 @@
-<?php if($image = $item->coverimage()->toFile()): ?>
+<?php if($item->coverimage()->isNotEmpty()): ?>
   <figure>
-    <img src="<?= $image->url() ?>" alt="" />
+    <img src="<?= $item->coverimage()->toFile()->url() ?>" alt="" />
   </figure>
 <?php endif ?>

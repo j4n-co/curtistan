@@ -8,19 +8,18 @@
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
   <meta name="description" content="<?= $site->description()->html() ?>">
 
-  <?= css('assets/css/index.css') ?>
+  <?php snippet('scss') ?>
 
 </head>
-<body>
+<body class='prototype'>
 
   <header class="header wrap wide" role="banner">
-    <div class="grid">
 
-      <div class="branding column">
+
+      <h1 class="site-title">
         <a href="<?= url() ?>" rel="home"><?= $site->title()->html() ?></a>
-      </div>
+      </h1>
 
-      <?php snippet('menu') ?>
+      <?php// snippet('menu') ?>
 
-    </div>
   </header>

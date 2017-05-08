@@ -1,7 +1,7 @@
 title: Project
 
 files:
-  sortable: true
+  sortable: false
 
 pages: false
 
@@ -9,13 +9,57 @@ fields:
   title:
     label: Title
     type:  text
-    width: 3/4
+    width: 1/2
+  background:
+    label: Background
+    type:  image
+    width: 1/2
+    default: ''
+  homeDescription:
+    label: Homepage Description
+    type:  markdown
+    width: 5
+  line:
+    type: line
+  gallerygrid:
+    type: gallerygrid
+  builder:
+    label: Items
+    type: builder
+    sortable: false
+    fieldsets:
+      bodytext:
+        label: item
+        snippet: builder/item
+        fields:
+          text:
+            label: content
+            type: markdown
+          x:
+            label: x (%)
+            type: number
+            width: 1/5
+            min: 0
+            default: 0
+          y:
+            label: 'y (%)'
+            type: number
+            width: 1/5
+            min: 0
+            default: 0
+          width:
+            label: width (px)
+            type: number
+            width: 1/5
+            min: 0
+            default: 400
+          height:
+            label: height (px)
+            type: number
+            width: 1/5
+            min: 0
+          showOnHome:
+            label: show on homescreen?
+            type: toggle
+            width: 5/5
 
-  year:
-    label: Year
-    type:  text
-    width: 1/4
-
-  text:
-    label: Text
-    type:  textarea
