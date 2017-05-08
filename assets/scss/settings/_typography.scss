@@ -1,0 +1,65 @@
+@import 'modularscale';
+@import 'font-face-mixin';
+
+$primary-font: sans-serif;
+/*
+@include font-face($primary-font, '/fonts/redacted/redacted-script-regular', normal);
+@include font-face($primary-font, '/fonts/redacted/redacted-script-regular', lighter);
+@include font-face($primary-font, '/fonts/redacted/redacted-script-bold', bold);
+*/
+
+//$primary-font-stack: $primary-font, sans-serif;
+//$secondary-font-stack: $primary-font, sans-serif;
+@include font-face('Poppins', '/fonts/Poppins/Poppins-Regular', normal, 'ttf');
+@include font-face('Poppins', '/fonts/Poppins/Poppins-Bold', bold, 'ttf');
+
+$primary-font-stack: 'Poppins', sans-serif;
+$secondary-font-stack: 'Poppins', sans-serif;
+
+$ratio: $fifth;
+
+$modularscale: (
+  base: 1rem,
+  ratio:$ratio,
+  /*
+  500px: (
+    ratio: 1.125,
+  ),*/
+  em: (
+    base: 1em,
+    ratio: $ratio
+  )
+);
+
+$font-sizes: (
+        xx-small:ms(-3),
+        x-small: ms(-2),
+        small: ms(-1),
+        medium: ms(0),
+        large: ms(1),
+        x-large: ms(2),
+        xx-large: ms(3),
+);
+// generic font-size helper class.
+@each $item, $size in $font-sizes {
+	.font-size--#{$item} {
+		font-size: $size;
+	}
+}
+
+@function font-sizes($key) {
+  @if map-has-key($font-sizes, $key) {
+    @return map-get($font-sizes, $key);
+  }
+  @warn "Unknown `#{$key}` in $font-size.";
+  @return null;
+}
+
+//https://css-tricks.com/snippets/sass/strip-unit-function/
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

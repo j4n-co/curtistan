@@ -1,0 +1,102 @@
+* { box-sizing: border-box }
+
+html {
+	font-size: 18px;
+	height: 100%;
+}
+
+body {
+	font-family: $primary-font-stack;
+	margin: 0;
+	padding: 0;
+	line-height: strip-unit( ms(1) );
+	min-height: 100%;
+	background-color: colors(background);
+}
+
+/* use only bottom margin */
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,p,figure,
+pre,table,fieldset,hr, address, blockquote {
+		margin: 0;
+		margin-bottom: ms(0, $thread: rem);
+}
+
+/* headings */
+h1,h2,h3,h4,h5,h6,hgroup, address {
+        font-family: $secondary-font-stack;
+        margin: 0;
+		margin-bottom: ms(-2, $thread: rem);
+        line-height: ms(0, $thread: em);
+
+}
+
+h1 {
+        font-size: font-sizes(x-large);
+		text-transform: uppercase;
+}
+
+h2 {
+        font-size: font-sizes(large);
+}
+
+h3 {
+        font-size: font-sizes(medium);
+}
+h4, h5, h6 {
+        font-size: font-sizes(medium);
+        font-weight: bold;
+}
+
+/* text elements */
+a {
+	color: colors(text);
+	text-decoration: none;
+	// obssesive underlines https://medium.design/crafting-link-underlines-on-medium-7c03a9274f9
+	// this could be contained to a space where the background color is known.
+	background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" height="1em" width="1em"><line x1="1" y1="1" x2="0" y2="1" stroke-width="0.2" stroke="black"/></svg>');
+	background-position: 0 70%;
+	background-repeat: repeat-x;
+	background-size: auto 50%;
+}
+a:hover {
+	color: colors(primary);
+	background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Artboard" stroke="#00D3D5" stroke-width="2"><path d="M0,13.8706934 C1.1045695,13.8706934 2,14.4353467 2,14.4353467 C2,14.4353467 2.8954305,15 4,15 C5.1045695,15 6,14.4353467 6,14.4353467 C6,14.4353467 6.8954305,13.8706934 8,13.8706934 C9.1045695,13.8706934 10,14.4353467 10,14.4353467 C10,14.4353467 10.8954305,15 12,15 C13.1045695,15 14,14.4353467 14,14.4353467 C14,14.4353467 14.8954305,13.8706934 16,13.8706934" id="Oval"></path></g></g></svg>');
+	animation-name: movebg;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes movebg {
+	from {
+		background-position:  0 70%;
+	}
+	to {
+		background-position:  100% 70%;
+	}
+}
+
+p {
+	font-size: font-sizes(medium);
+}
+/* since paragraphs can commonly contain floated images, clearfix them */
+p:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+p img{
+	padding: 0.5em;
+}
+figure {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 1rem;
+	background-color: colors(paper);
+}
+figcaption {
+	font-style: italic;
+	color: lighten( colors(text), 36%);
+	padding: 0.5rem 0;
+}

@@ -1,0 +1,15 @@
+.color-swatch,
+.color-swatch--background,
+.color-swatch--text,
+.color-swatch--primary,
+.color-swatch--secondary,
+.color-swatch--ternary {
+	width: 9rem;
+	height: 9rem;
+}
+
+@each $item, $color in $colors {
+	.color-swatch--#{$item} {
+		background-color: colors($item);
+	}
+}

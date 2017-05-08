@@ -1,0 +1,27 @@
+.nav {
+	display: flex;
+	justify-content: center;
+	background-color: colors(paper);
+	.nav__section--primary,
+	.nav__section--secondary  {
+		position: relative;
+		padding: 0 1rem;
+	}
+	.nav__section--secondary {
+		flex-direction: column;
+		position: absolute;
+		display: none;
+		top: 100%;
+		left: 0;
+	}
+
+	.nav__section--secondary > a {
+		display: block;
+		white-space: nowrap;
+	}
+
+	.nav__section--secondary > a:target,
+	.nav__section--primary:hover .nav__section--secondary{
+		display: inline-block;
+	}
+}

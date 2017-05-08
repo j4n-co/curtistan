@@ -1,0 +1,53 @@
+@mixin outline {
+	//outline: 1px solid red;
+}
+:root {
+	--cw: 5rem;
+}
+
+.l__content-wrapper {
+	max-width: $grid-content-width;
+	margin: 0 auto;
+	@include outline;
+}
+
+.l__site-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0 auto;
+	@include outline;
+}
+
+.l__project {
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 100vh;
+	width: 100%;
+	overflow: visible;
+}
+
+.l__project__content-wrapper {
+	max-width: $grid-content-width;
+	margin: 0 auto;
+	position: relative;
+	height: 100%;
+	@include outline;
+}
+
+.l__floating-box {
+	position: absolute;
+	z-index: 1;
+}
+
+.l__fixed-box {
+	position: fixed;
+	bottom: 5rem;
+	float: left;
+	width: 24rem;
+	z-index: 2;
+}

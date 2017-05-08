@@ -1,0 +1,23 @@
+.project-item {
+	background-color: transparent;
+	max-width: 100%;
+	p {
+		padding: ms(-1) ms(-1) 0 ms(-1);
+		background-color: colors(paper);
+		margin: 0;
+	}
+	p:last-of-type {
+		padding-bottom: ms(0);
+	}
+	img {
+		padding-bottom: 1rem;
+	}
+	blockquote {
+		background-color: colors(paper);
+		margin: 0;
+		padding: 1rem;
+		font-size: font-sizes(large);
+		font-style:italic;
+		color: lighten( colors(text), 50%);
+	}
+}

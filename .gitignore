@@ -7,3 +7,8 @@ content/*
 thumbs/*
 # exception to the rule
 !thumbs/.gitkeep
+
+node_modules
+.vscode
+.sass-cache
+
