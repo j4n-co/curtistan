@@ -1,11 +1,11 @@
 import Waypoint from '../../node_modules/waypoints/lib/noframework.waypoints.js';
 
-var descriptionContainer = document.querySelector('.home-project-descriptions');
+var descriptionContainer = document.querySelector('[data-js-fixed-items]');
 var descriptionOffset = descriptionContainer.getBoundingClientRect().top;
-var descriptionContents = document.querySelectorAll('.home-project-description');
+var descriptionContents = document.querySelectorAll('[data-js-fixed-item]');
 var descriptionContentIndexes = [];
 
-var projectSections = document.querySelectorAll('.project-section');
+var projectSections = document.querySelectorAll('[data-js-project-section]');
 
 var activeProject;
 descriptionContents.forEach( function( el ) { descriptionContentIndexes.push( el.dataset.pageid ) } )
@@ -28,7 +28,7 @@ activeDescription.classList.add('js-visible');
 }
 
 projectSections.forEach(function(project){
-new Waypoint({
+new window.Waypoint({
 element: project,
 handler: function(direction) {
         if (direction === 'up') {
@@ -41,3 +41,19 @@ group: 'project-sections',
 offset: descriptionOffset
 });
 });
+
+
+
+var absoluteItemContainers = document.querySelectorAll('[data-js-project-section]');
+var absoluteItemClass = '.builder-item';
+
+absoluteItemContainers.forEach(function( item ){
+var containerBoundsTop = item.offsetTop + item.offsetHeight;
+item.querySelectorAll(absoluteItemClass).forEach(function(el){
+var itemBoundsTop = el.offsetTop + el.offsetHeight;
+if ( itemBoundsTop > containerBoundsTop ) {
+        item.style['min-height'] = itemBoundsTop + 'px';
+}
+
+});
+})

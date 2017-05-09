@@ -8,18 +8,11 @@
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
   <meta name="description" content="<?= $site->description()->html() ?>">
 
-  <?php snippet('scss') ?>
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
-<body class='prototype'>
-
-  <header class="header wrap wide" role="banner">
-
-
-      <h1 class="site-title">
-        <a href="<?= url() ?>" rel="home"><?= $site->title()->html() ?></a>
-      </h1>
-
-      <?php// snippet('menu') ?>
-
-  </header>
+<body>
+  <h1 class="site-header">
+    <a class="site-header__a" href="<?= url() ?>" rel="home"><?= $site->title()->html() ?></a>
+  </h1>
+  <?php// snippet('menu') ?>

@@ -36,6 +36,7 @@
 	margin: 0 auto;
 	position: relative;
 	height: 100%;
+	min-height: 100vh;
 	@include outline;
 }
 
@@ -50,4 +51,8 @@
 	float: left;
 	width: 24rem;
 	z-index: 2;
+	display: none;
+}
+.l__fixed-box.js-visible {
+	display: block;
 }

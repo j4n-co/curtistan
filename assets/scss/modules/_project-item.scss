@@ -5,12 +5,15 @@
 		padding: ms(-1) ms(-1) 0 ms(-1);
 		background-color: colors(paper);
 		margin: 0;
+		-webkit-hyphens: auto;
+		word-wrap: break-word;
 	}
 	p:last-of-type {
 		padding-bottom: ms(0);
 	}
 	img {
 		padding-bottom: 1rem;
+		max-width: 100%;
 	}
 	blockquote {
 		background-color: colors(paper);

@@ -7,7 +7,7 @@ email: jan.drewniak@gmail.com
 language: en
 role: admin
 history:
+  - projects/project-a
   - projects/project-b
   - projects/project-c
-  - projects/project-a
   - projects/project-d

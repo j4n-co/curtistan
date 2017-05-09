@@ -7,6 +7,6 @@
   ( $data->height()->isNotEmpty() ) ? $itemStyles .= 'height: '.$data->height().'px; ' : '';
 
 ?>
-<div class="builder-item" style="<?= $itemStyles?>">
+<div class="project-item l__floating-box" style="<?= $itemStyles?>">
     <?=  $data->text()->kirbytext() ?>
 </div>

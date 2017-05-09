@@ -4,7 +4,7 @@
     <?php snippet('home-project-description', ['projects' => [$page]] ) ?>
 
     <section class="project-sections">
-        <?php snippet('showcase', ['projects' => [$page] ] ) ?>
+        <?php snippet('project-section', ['projects' => [$page] ] ) ?>
     </section>
 
   </main>

@@ -842,12 +842,12 @@ var _noframeworkWaypoints2 = _interopRequireDefault(_noframeworkWaypoints);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var descriptionContainer = document.querySelector('.home-project-descriptions');
+var descriptionContainer = document.querySelector('[data-js-fixed-items]');
 var descriptionOffset = descriptionContainer.getBoundingClientRect().top;
-var descriptionContents = document.querySelectorAll('.home-project-description');
+var descriptionContents = document.querySelectorAll('[data-js-fixed-item]');
 var descriptionContentIndexes = [];
 
-var projectSections = document.querySelectorAll('.project-section');
+var projectSections = document.querySelectorAll('[data-js-project-section]');
 
 var activeProject;
 descriptionContents.forEach(function (el) {
@@ -871,7 +871,7 @@ function activeSectionChanged(element) {
 }
 
 projectSections.forEach(function (project) {
-        new _noframeworkWaypoints2.default({
+        new window.Waypoint({
                 element: project,
                 handler: function handler(direction) {
                         if (direction === 'up') {
@@ -882,6 +882,19 @@ projectSections.forEach(function (project) {
                 },
                 group: 'project-sections',
                 offset: descriptionOffset
+        });
+});
+
+var absoluteItemContainers = document.querySelectorAll('[data-js-project-section]');
+var absoluteItemClass = '.builder-item';
+
+absoluteItemContainers.forEach(function (item) {
+        var containerBoundsTop = item.offsetTop + item.offsetHeight;
+        item.querySelectorAll(absoluteItemClass).forEach(function (el) {
+                var itemBoundsTop = el.offsetTop + el.offsetHeight;
+                if (itemBoundsTop > containerBoundsTop) {
+                        item.style['min-height'] = itemBoundsTop + 'px';
+                }
         });
 });
 

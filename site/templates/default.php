@@ -1,18 +1,10 @@
 <?php snippet('header') ?>
+<?php $projects = page('projects')->children()->visible(); ?>
+  <main role="main">
 
-  <main class="main" role="main">
+    <?php snippet('home-project-description', ['projects' => $projects] ) ?>
 
-    <header class="wrap">
-      <h1><?= $page->title()->html() ?></h1>
-      <div class="intro text">
-        <?= $page->intro()->kirbytext() ?>
-      </div>
-      <hr />
-    </header>
-      
-    <div class="text wrap">
-      <?= $page->text()->kirbytext() ?>
-    </div>
+    <?php snippet('project-sections', ['projects' => $projects] ) ?>
 
   </main>
 

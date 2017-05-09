@@ -2,8 +2,13 @@
 	font-size: font-sizes(x-large);
 	margin: 1rem auto;
 	text-align: center;
-	a {
-		color: colors(text);
-		background: none;
-	}
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+}
+.site-header__a {
+	color: colors(paper);
+	background-image: none;
 }

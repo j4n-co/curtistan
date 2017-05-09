@@ -2,9 +2,9 @@
 if(!isset($projects)) $projects = page('projects')->children()->visible();
 ?>
 
-<aside class="home-project-descriptions">
+<aside data-js-fixed-items>
 	<?php foreach($projects as $project): ?>
-		<div class="home-project-description" data-pageId="<?= $project->uid() ?>">
+		<div class="project-item l__fixed-box" data-js-fixed-item data-pageId="<?= $project->uid() ?>">
 			<h2><?= $project->title() ?></h2>
 			<?= $project->homeDescription()->kirbytext() ?>
 			<?php if ( $page === $site->homePage() ) : ?>

@@ -10,8 +10,8 @@ $primary-font: sans-serif;
 
 //$primary-font-stack: $primary-font, sans-serif;
 //$secondary-font-stack: $primary-font, sans-serif;
-@include font-face('Poppins', '/fonts/Poppins/Poppins-Regular', normal, 'ttf');
-@include font-face('Poppins', '/fonts/Poppins/Poppins-Bold', bold, 'ttf');
+@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-Regular', normal, 'ttf');
+@include font-face('Poppins', '/assets/fonts/Poppins/Poppins-Bold', bold, 'ttf');
 
 $primary-font-stack: 'Poppins', sans-serif;
 $secondary-font-stack: 'Poppins', sans-serif;
