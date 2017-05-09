@@ -1,0 +1,42 @@
+/** the following hacks override the default Builder styles */
+/* they are loaded after the Builder styles, hence all the !important */
+
+.builder-entry-fieldset-name {
+        z-index: 2;
+}
+
+.l__project, .structure-entries.builder-entries {
+        background-attachment: initial!important;
+}
+
+.builder-entry-content .l__floating-box {
+        position: static;
+}
+
+.structure-entry,
+.structure-entry-content,
+.structure-entry-options {
+        background-color: transparent;
+        border-color: transparent;
+}
+
+.structure-entry:hover,
+.structure-entry:hover .structure-entry-content,
+.structure-entry:hover .structure-entry-options {
+        background-color: white;
+        border: 1px solid #efefef;
+}
+.structure-entry-options {
+        display: none;
+}
+.structure-entry:hover .structure-entry-options {
+        display: block;
+}
+
+.structure-sortable-helper {
+        border-color: transparent;
+}
+
+.btn-rounded {
+        background-color:white;
+}

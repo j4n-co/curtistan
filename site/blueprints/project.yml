@@ -25,7 +25,7 @@ fields:
     type: gallerygrid
   builder:
     label: Items
-    type: builder
+    type: customBuilder
     sortable: false
     fieldsets:
       bodytext:

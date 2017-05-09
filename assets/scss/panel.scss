@@ -1,10 +1,31 @@
-/* layouts */
 @import 'layouts/global';
-
-/* modules */
+@import 'settings/typography';
 @import 'modules/project-item';
 
 /* Panel overrides */
+
+@media screen and (min-width: 50em) {
+        .sidebar {
+                width: 20%;
+                padding: 0;
+        }
+        .mainbar {
+                width: 80%;
+        }
+
+        .bars-with-sidebar-left:before {
+                width: 20%;
+        }
+
+        .mainbar .form .buttons {
+                background: rgba(239, 239, 239, 0.75);
+        }
+
+        .ltr .mainbar .form .buttons {
+                left: 20%;
+                right: 0;
+        }
+}
 
 .structure-entries.builder-entries {
         @extend .l__project;
@@ -12,4 +33,9 @@
 .structure-entry,
 .structure-entry-content {
         position: static;
+}
+
+.field-with-line {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
 }
