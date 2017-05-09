@@ -7,9 +7,15 @@
 [submodule "site/fields/builder"]
 	path = site/fields/builder
 	url = https://github.com/TimOetting/kirby-builder.git
-[submodule "site/fields/gallerygrid"]
-	path = site/fields/gallerygrid
-	url = https://github.com/fabianmichael/kirby-imagekit.git
 [submodule "site/fields/markdown"]
 	path = site/fields/markdown
 	url = https://github.com/JonasDoebertin/kirby-visual-markdown.git
+[submodule "vendor/Kirby-GalleryGrid"]
+	path = vendor/Kirby-GalleryGrid
+	url = https://github.com/1n3JgKl9pQ6cUMrW/Kirby-GalleryGrid.git
+[submodule "site/plugins/imagekit"]
+	path = site/plugins/imagekit
+	url = https://github.com/fabianmichael/kirby-imagekit.git
+[submodule "site/plugins/imageset"]
+	path = site/plugins/imageset
+	url = https://github.com/fabianmichael/kirby-imageset.git
