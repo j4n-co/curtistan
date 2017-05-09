@@ -1,0 +1,15 @@
+/* layouts */
+@import 'layouts/global';
+
+/* modules */
+@import 'modules/project-item';
+
+/* Panel overrides */
+
+.structure-entries.builder-entries {
+        @extend .l__project;
+}
+.structure-entry,
+.structure-entry-content {
+        position: static;
+}

@@ -30,3 +30,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 c::set('debug',true);
+
+// link custom CSS to panel
+// TODO: make a seperate webpack build for this.
+c::set('panel.stylesheet', 'assets/css/panel.css');
