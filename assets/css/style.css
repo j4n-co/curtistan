@@ -1,0 +1,324 @@
+/* settings */
+/**
+* Color Variables
+**/
+/*
+@include font-face($primary-font, '/fonts/redacted/redacted-script-regular', normal);
+@include font-face($primary-font, '/fonts/redacted/redacted-script-regular', lighter);
+@include font-face($primary-font, '/fonts/redacted/redacted-script-bold', bold);
+*/
+@font-face {
+  font-family: "Poppins";
+  font-style: "ttf";
+  font-weight: normal;
+  src: url("/assets/fonts/Poppins/Poppins-Regular.eot?") format("eot"), url("/assets/fonts/Poppins/Poppins-Regular.woff2") format("woff2"), url("/assets/fonts/Poppins/Poppins-Regular.woff") format("woff"), url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype"), url("/assets/fonts/Poppins/Poppins-Regular.svg#Poppins") format("svg"); }
+@font-face {
+  font-family: "Poppins";
+  font-style: "ttf";
+  font-weight: bold;
+  src: url("/assets/fonts/Poppins/Poppins-Bold.eot?") format("eot"), url("/assets/fonts/Poppins/Poppins-Bold.woff2") format("woff2"), url("/assets/fonts/Poppins/Poppins-Bold.woff") format("woff"), url("/assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype"), url("/assets/fonts/Poppins/Poppins-Bold.svg#Poppins") format("svg"); }
+.font-size--xx-small {
+  font-size: 0.2963rem; }
+
+.font-size--x-small {
+  font-size: 0.44444rem; }
+
+.font-size--small {
+  font-size: 0.66667rem; }
+
+.font-size--medium {
+  font-size: 1rem; }
+
+.font-size--large {
+  font-size: 1.5rem; }
+
+.font-size--x-large {
+  font-size: 2.25rem; }
+
+.font-size--xx-large {
+  font-size: 3.375rem; }
+
+.show-grid:after {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="1" height="1" viewBox="0 0 6 6" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect id="grid" x="0.5" y="0" width="5" height="6" fill="#00D4D5" fill-opacity="0.2"></rect></svg>'), url('data:image/svg+xml;charset=UTF-8,<svg width="1" height="1" viewBox="0 0 1 1" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect id="grid" x="0" y="0" width="1" fill="none" height="1" stroke="#00D4D5" stroke-width="0.05" stroke-opacity="0.3"></rect></svg>');
+  background-repeat: repeat;
+  background-size: auto 6rem, auto 1rem;
+  background-position: center top, center top;
+  opacity: 0.8; }
+
+.show-grid-outline {
+  outline: 1px solid red; }
+
+/* elements */
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 18px;
+  height: 100%; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  min-height: 100%;
+  background-color: #ebecec; }
+
+/* use only bottom margin */
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dd, p, figure,
+pre, table, fieldset, hr, address, blockquote {
+  margin: 0;
+  margin-bottom: 1rem; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6, hgroup, address {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  margin-bottom: 0.44444rem;
+  line-height: 1em; }
+
+h1 {
+  font-size: 2.25rem;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1rem; }
+
+h4, h5, h6 {
+  font-size: 1rem;
+  font-weight: bold; }
+
+/* text elements */
+a {
+  color: #333;
+  text-decoration: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" height="1em" width="1em"><line x1="1" y1="1" x2="0" y2="1" stroke-width="0.2" stroke="black"/></svg>');
+  background-position: 0 70%;
+  background-repeat: repeat-x;
+  background-size: auto 50%; }
+
+a:hover {
+  color: #00D4D5;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="1em" height="1em" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Artboard" stroke="#00D3D5" stroke-width="2"><path d="M0,13.8706934 C1.1045695,13.8706934 2,14.4353467 2,14.4353467 C2,14.4353467 2.8954305,15 4,15 C5.1045695,15 6,14.4353467 6,14.4353467 C6,14.4353467 6.8954305,13.8706934 8,13.8706934 C9.1045695,13.8706934 10,14.4353467 10,14.4353467 C10,14.4353467 10.8954305,15 12,15 C13.1045695,15 14,14.4353467 14,14.4353467 C14,14.4353467 14.8954305,13.8706934 16,13.8706934" id="Oval"></path></g></g></svg>');
+  animation-name: movebg;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes movebg {
+  from {
+    background-position: 0 70%; }
+  to {
+    background-position: 100% 70%; } }
+p {
+  font-size: 1rem; }
+
+/* since paragraphs can commonly contain floated images, clearfix them */
+p:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+p img {
+  padding: 0.5em; }
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem;
+  background-color: #fff; }
+
+figcaption {
+  font-style: italic;
+  color: #8f8f8f;
+  padding: 0.5rem 0; }
+
+/* modules */
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #fff; }
+  .nav .nav__section--primary,
+  .nav .nav__section--secondary {
+    position: relative;
+    padding: 0 1rem; }
+  .nav .nav__section--secondary {
+    flex-direction: column;
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0; }
+  .nav .nav__section--secondary > a {
+    display: block;
+    white-space: nowrap; }
+  .nav .nav__section--secondary > a:target,
+  .nav .nav__section--primary:hover .nav__section--secondary {
+    display: inline-block; }
+
+.site-header {
+  font-size: 2.25rem;
+  margin: 1rem auto;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%; }
+
+.site-header__a {
+  color: #fff;
+  background-image: none; }
+
+.show-grid:after {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="1" height="1" viewBox="0 0 6 6" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect id="grid" x="0.5" y="0" width="5" height="6" fill="#00D4D5" fill-opacity="0.2"></rect></svg>'), url('data:image/svg+xml;charset=UTF-8,<svg width="1" height="1" viewBox="0 0 1 1" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect id="grid" x="0" y="0" width="1" fill="none" height="1" stroke="#00D4D5" stroke-width="0.05" stroke-opacity="0.3"></rect></svg>');
+  background-repeat: repeat;
+  background-size: auto 6rem, auto 1rem;
+  background-position: center top, center top;
+  opacity: 0.8; }
+
+.show-grid-outline {
+  outline: 1px solid red; }
+
+/**
+* Color Variables
+**/
+.project-item {
+  background-color: transparent;
+  max-width: 100%; }
+  .project-item p {
+    padding: 0.66667rem 0.66667rem 0 0.66667rem;
+    background-color: #fff;
+    margin: 0;
+    -webkit-hyphens: auto;
+    word-wrap: break-word; }
+  .project-item p:last-of-type {
+    padding-bottom: 1rem; }
+  .project-item img {
+    padding-bottom: 1rem;
+    max-width: 100%; }
+  .project-item blockquote {
+    background-color: #fff;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #b3b3b3; }
+
+.color-swatch,
+.color-swatch--background,
+.color-swatch--text,
+.color-swatch--primary,
+.color-swatch--secondary,
+.color-swatch--ternary {
+  width: 9rem;
+  height: 9rem; }
+
+.color-swatch--paper {
+  background-color: #fff; }
+
+.color-swatch--background {
+  background-color: #ebecec; }
+
+.color-swatch--text {
+  background-color: #333; }
+
+.color-swatch--primary {
+  background-color: #00D4D5; }
+
+.color-swatch--secondary {
+  background-color: #7E00D5; }
+
+.color-swatch--ternary {
+  background-color: #FF4B00; }
+
+.site-footer {
+  position: relative;
+  top: -50px;
+  height: 0px; }
+
+/* layouts */
+.show-grid:after {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="1" height="1" viewBox="0 0 6 6" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect id="grid" x="0.5" y="0" width="5" height="6" fill="#00D4D5" fill-opacity="0.2"></rect></svg>'), url('data:image/svg+xml;charset=UTF-8,<svg width="1" height="1" viewBox="0 0 1 1" version="1.1" xmlns="http://www.w3.org/2000/svg"><rect id="grid" x="0" y="0" width="1" fill="none" height="1" stroke="#00D4D5" stroke-width="0.05" stroke-opacity="0.3"></rect></svg>');
+  background-repeat: repeat;
+  background-size: auto 6rem, auto 1rem;
+  background-position: center top, center top;
+  opacity: 0.8; }
+
+.show-grid-outline {
+  outline: 1px solid red; }
+
+:root {
+  --cw: 5rem; }
+
+.l__content-wrapper {
+  max-width: 55rem;
+  margin: 0 auto; }
+
+.l__site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto; }
+
+.l__project {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  overflow: visible; }
+
+section.l__project:first-of-type {
+  padding-top: 3.375rem; }
+
+.l__project__content-wrapper {
+  max-width: 55rem;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  min-height: 100vh; }
+
+.l__floating-box {
+  position: absolute;
+  z-index: 1; }
+
+.l__fixed-box {
+  position: fixed;
+  bottom: 5rem;
+  float: left;
+  width: 24rem;
+  z-index: 2;
+  display: none; }
+
+.l__fixed-box.js-visible {
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */
