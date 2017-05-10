@@ -23,9 +23,9 @@ fields:
     type: line
   gallerygrid:
     type: gallerygrid
-  builder:
+  custombuilder:
     label: Items
-    type: customBuilder
+    type: custombuilder
     sortable: false
     fieldsets:
       bodytext:

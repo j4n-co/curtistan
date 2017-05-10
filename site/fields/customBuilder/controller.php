@@ -5,12 +5,12 @@ require_once(panel()->roots()->fields()."/structure/controller.php");
 use Kirby\Panel\Structure;;
 use Kirby\Panel\Models\Page\Blueprint\Field;
 
-class BuilderStructure extends Structure {
+class CustombuilderStructure extends Structure {
 
   protected $fieldsets;
 
   public function __construct($model) {
-    parent::__construct($model, "customBuilder");
+    parent::__construct($model, "custombuilder");
   }
 
   public function forFieldset($field, $fieldsetName) {
@@ -26,7 +26,7 @@ class BuilderStructure extends Structure {
   }
 }
 
-class CustomBuilderFieldController extends StructureFieldController {
+class CustombuilderFieldController extends StructureFieldController {
 
   public function add() {
 
@@ -106,7 +106,7 @@ class CustomBuilderFieldController extends StructureFieldController {
   }
 
   private function fieldsetStructure($fieldsetName) {
-    $structure = new CustomBuilderStructure($this->model());
+    $structure = new CustombuilderStructure($this->model());
     return $structure->forFieldset($this->fieldname(), $fieldsetName);
   }
 

@@ -13,7 +13,7 @@
     <?php foreach ($field->fieldsets as $fieldsetName => $fieldset):
       $fieldset = $field->fieldset($fieldsetName);
     ?>
-      <a class="btn btn-rounded" data-quickform href="#" data-href="<?= purl($field->page, 'field/' . $field->name . '/customBuilder/add?fieldset=' . $fieldsetName) ?>"><i class="icon icon-left fa fa-plus-circle"></i><?= $fieldset->label ?></a>
+      <a class="btn btn-rounded" data-quickform href="#" data-href="<?= purl($field->page, 'field/' . $field->name . '/custombuilder/add?fieldset=' . $fieldsetName) ?>"><i class="icon icon-left fa fa-plus-circle"></i><?= $fieldset->label ?></a>
     <?php endforeach ?>
   </div>
 

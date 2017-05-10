@@ -10,7 +10,7 @@ if(!isset($projects)) $projects = page('projects')->children()->visible();
          data-pageId="<?= $project->UID()?>" data-js-project-section>
 
         <article class="l__project__content-wrapper">
-          <?php foreach($project->builder()->toStructure() as $section): ?>
+          <?php foreach($project->custombuilder()->toStructure() as $section): ?>
             <?php if ( $page === $site->homePage() ): ?>
               <?php if ( $section->showOnHome()->isTrue() ) : ?>
                 <?php snippet('/builder/item', array('data' => $section)) ?>

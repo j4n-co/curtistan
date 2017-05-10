@@ -40,3 +40,12 @@
 .btn-rounded {
         background-color:white;
 }
+
+
+.structure-entry.builder-entry.builder-add-container{
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  background-color: #fff;
+  right: 5%;
+}
