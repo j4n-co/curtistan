@@ -31,7 +31,7 @@ projectSections.forEach(function(project){
 new window.Waypoint({
 element: project,
 handler: function(direction) {
-        if (direction === 'up') {
+        if (direction === 'up' && this.previous() ) {
         activeSectionChanged( this.previous().element )
         } else {
         activeSectionChanged( this.element )
