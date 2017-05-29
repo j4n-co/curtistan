@@ -2,43 +2,43 @@
 <html>
   <head>
     <title>Curtisland styleguide</title>
-    <link rel="stylesheet" href="style/style.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
     <div class="l__site-header">
       <h1 class="site-header"><a class="site-header__a" href="/styleguide/index.html">The Curtistan Style guide</a></h1>
       <div class="l__site-nav"></div>
     </div>
-    <div class="project-item l__fixed-box">
-      <h3>Hello</h3>
-      <p>
-        This is the Curtistan styleguide.
-        It contains all the modules and styles
-        used on <a href="http://curtistan.diamonds">curtistan.diamonds</a>.
-      </p>
-      <p>here's a menu in case you get lost.</p>
-      <nav class="nav">
-        <div class="nav__section--primary"><a href="/styleguide/index.html">home</a></div>
-        <div class="nav__section--primary"><a>elements</a>
-          <div class="nav__section--secondary"><a href="#colors">colors</a><a href="#grid">grid</a><a href="#grid">typography</a></div>
-        </div>
-        <div class="nav__section--primary"><a>modules</a>
-          <div class="nav__section--secondary"><a href="/styleguide/modules/_global-footer.html">global footer</a><a class="nav__link--current" href="/styleguide/modules/_nav-menu.html">nav menu</a><a href="/styleguide/modules/_project-descriptions.html">project descriptions</a><a href="/styleguide/modules/_project-item.html">project item</a><a href="/styleguide/modules/_site-header.html">site header</a></div>
-        </div>
-        <div class="nav__section--primary"><a>templates</a>
-          <div class="nav__section--secondary"><a href="/styleguide/layouts/_home-page.html">home</a><a href="/styleguide/layouts/_project-page.html">project page</a><a href="/styleguide/layouts/_about-page.html">about page</a></div>
-        </div>
-      </nav>
-    </div>
-    <div class="l__project">
+    <div class="l__project" data-js-project-section="data-js-project-section">
       <div class="l__project__content-wrapper">
         <div class="project-item l__floating-box" style="top:5rem; left:27rem;"><img src="/images/styleguide-mc-hammer.gif"/></div>
+        <div class="project-item l__fixed-box" data-js-fixed-item="data-js-fixed-item">
+          <nav class="nav">
+            <div class="nav__section--primary"><a href="/styleguide/index.html">home</a></div>
+            <div class="nav__section--primary"><a>elements</a>
+              <div class="nav__section--secondary"><a href="#colors">colors</a><a href="#grid">grid</a><a href="#grid">typography</a></div>
+            </div>
+            <div class="nav__section--primary"><a>modules</a>
+              <div class="nav__section--secondary"><a href="/styleguide/modules/_global-footer.html">global footer</a><a class="nav__link--current" href="/styleguide/modules/_nav-menu.html">nav menu</a><a href="/styleguide/modules/_project-descriptions.html">project descriptions</a><a href="/styleguide/modules/_project-item.html">project item</a><a href="/styleguide/modules/_site-header.html">site header</a></div>
+            </div>
+            <div class="nav__section--primary"><a>templates</a>
+              <div class="nav__section--secondary"><a href="/styleguide/layouts/_home-page.html">home</a><a href="/styleguide/layouts/_project-page.html">project page</a><a href="/styleguide/layouts/_about-page.html">about page</a></div>
+            </div>
+          </nav>
+          <h3>Hello</h3>
+          <p>
+            This is the Curtistan styleguide.
+            It contains all the modules and styles
+            used on <a href="http://curtistan.diamonds">curtistan.diamonds</a>.
+          </p>
+          <p>here's a menu in case you get lost.</p>
+        </div>
       </div>
     </div>
-    <div class="l__project">
+    <div class="l__project" data-js-project-section="data-js-project-section">
       <div class="l__project__content-wrapper">
         <div class="project-item l__floating-box" style="top:1rem; left:5rem;">
-          <h1 class="site-header">Colors</h1>
+          <h1>Colors</h1>
         </div>
         <div class="project-item l__floating-box" style="top: 24rem;left: 7rem;width:11rem;">
           <figure>
@@ -70,22 +70,25 @@
             <figcaption>ternary color</figcaption>
           </figure>
         </div>
+        <div class="project-item l__fixed-box" data-js-fixed-item="data-js-fixed-item">
+          <p>these are some colors</p>
+        </div>
       </div>
     </div>
-    <div class="l__project show-grid">
+    <div class="l__project show-grid" data-js-project-section="data-js-project-section">
       <div class="l__project__content-wrapper show-grid-outline">
         <div class="project-item l__floating-box" style="top:5rem;left: 18rem;width: 7rem;">
-          <h1 class="site-header">Grid</h1>
+          <h1>Grid</h1>
         </div>
         <div class="project-item l__floating-box" style="top:12rem;left: 7rem;width: 23rem;">
           <p>The grid is made up of columns that are 5rems wide, with a 1rem gutter. 1rem is set to equal 18px. Content is contained within a centered 9 column grid.</p>
         </div>
       </div>
     </div>
-    <div class="l__project">
+    <div class="l__project" data-js-project-section="data-js-project-section">
       <div class="l__project__content-wrapper">
         <div class="project-item l__floating-box" style="top:5rem;left: 18rem;width: 7rem;">
-          <h1 class="site-header">Typography</h1>
+          <h1>Typography</h1>
         </div>
         <div class="project-item l__floating-box" style="top:12rem;left: 7rem;width: 29rem;">
           <h1><a href="#base-elements">This is an H1 heading</a></h1>
@@ -105,7 +108,7 @@
         </div>
       </div>
     </div>
-    <div class="l__project" style="background-image:url(/images/styleguide-background-1.jpg);">
+    <div class="l__project" style="background-image:url(/images/styleguide-background-1.jpg);" data-js-project-section="data-js-project-section">
       <div class="l__project__content-wrapper">
         <div class="project-item l__floating-box" style="top:5rem; left:13rem; width:23rem;">
           <h2>Header H2</h2>
@@ -123,20 +126,23 @@
         </div>
       </div>
     </div>
-    <div class="l__project" style="background-image:url(/images/styleguide-background-2.jpg);">
+    <div class="l__project" style="background-image:url(/images/styleguide-background-2.jpg);" data-js-project-section="data-js-project-section">
       <div class="l__project__content-wrapper">
-        <div class="project-item l__floating-box" style="top:5rem; left:13rem; width:23rem;">
+        <div class="project-item l__floating-box" style="top:5rem; left:13rem;">
           <h2>Now let's try images, of bears, I guess.</h2>
         </div>
-        <div class="project-item l__floating-box" style="top:5rem; left:13rem; width:23rem;">
+        <div class="project-item l__floating-box" style="top:7rem; left:13rem; width:23rem;">
           <figure><img src="https://placebear.com/300/200" alt=""/>
             <figcaption>this is an image with a caption</figcaption>
           </figure>
-        </div>
-        <div class="project-item l__floating-box" style="top:5rem; left:13rem; width:23rem;">
           <h3>this is just an image.</h3><img src="https://placebear.com/300/200" alt=""/>
         </div>
       </div>
     </div>
+    <script>
+      	document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+      	':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+    <script src="/scripts/dist/index.js"></script>
   </body>
 </html>

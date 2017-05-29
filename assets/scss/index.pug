@@ -5,24 +5,25 @@ block content
 	.l__site-header
 		include modules/_site-header.pug
 		.l__site-nav
-	.project-item.l__fixed-box
-		h3 Hello
-		p
-			| This is the Curtistan styleguide.
-			| It contains all the modules and styles
-			| used on <a href="http://curtistan.diamonds">curtistan.diamonds</a>.
-		p here's a menu in case you get lost.
 
-		include modules/_nav-menu-b.pug
-
-	.l__project
+	.l__project(data-js-project-section)
 		.l__project__content-wrapper
 			.project-item.l__floating-box(style="top:5rem; left:27rem;")
 				img(src="/images/styleguide-mc-hammer.gif")
-	.l__project
+
+			.project-item.l__fixed-box(data-js-fixed-item)
+				include modules/_nav-menu-b.pug
+				h3 Hello
+				p
+					| This is the Curtistan styleguide.
+					| It contains all the modules and styles
+					| used on <a href="http://curtistan.diamonds">curtistan.diamonds</a>.
+				p here's a menu in case you get lost.
+
+	.l__project(data-js-project-section)
 		.l__project__content-wrapper
 			.project-item.l__floating-box(style="top:1rem; left:5rem;")
-				h1.site-header Colors
+				h1 Colors
 			.project-item.l__floating-box(style="top: 24rem;left: 7rem;width:11rem;")
 				figure
 					.color-swatch--background
@@ -43,16 +44,21 @@ block content
 				figure
 					.color-swatch--ternary
 					figcaption ternary color
-	.l__project.show-grid
+
+			.project-item.l__fixed-box(data-js-fixed-item)
+				p these are some colors
+
+
+	.l__project.show-grid(data-js-project-section)
 		.l__project__content-wrapper.show-grid-outline
 			.project-item.l__floating-box(style="top:5rem;left: 18rem;width: 7rem;")
-				h1.site-header Grid
+				h1 Grid
 			.project-item.l__floating-box(style="top:12rem;left: 7rem;width: 23rem;")
 				p The grid is made up of columns that are 5rems wide, with a 1rem gutter. 1rem is set to equal 18px. Content is contained within a centered 9 column grid.
-	.l__project
+	.l__project(data-js-project-section)
 		.l__project__content-wrapper
 			.project-item.l__floating-box(style="top:5rem;left: 18rem;width: 7rem;")
-				h1.site-header Typography
+				h1 Typography
 			.project-item.l__floating-box(style="top:12rem;left: 7rem;width: 29rem;")
 				h1
 					a(href="#base-elements") This is an H1 heading
@@ -69,7 +75,7 @@ block content
 				p.font-size--regular regular
 				p.font-size--small small
 
-	.l__project(style="background-image:url(/images/styleguide-background-1.jpg);")
+	.l__project(style="background-image:url(/images/styleguide-background-1.jpg);", data-js-project-section)
 		.l__project__content-wrapper
 			.project-item.l__floating-box(style="top:5rem; left:13rem; width:23rem;")
 				h2 Header H2
@@ -83,14 +89,13 @@ block content
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum adipisci, vel eos iure ut nobis, commodi dignissimos perspiciatis, esse officiis error ullam odio quod! Debitis ullam doloribus sequi et dolores!
 			.project-item.l__floating-box(style="top:29rem; left:13rem; width:23rem;")
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum adipisci, vel eos iure ut nobis, commodi dignissimos perspiciatis, esse officiis error ullam odio quod! Debitis ullam doloribus sequi et dolores!
-	.l__project(style="background-image:url(/images/styleguide-background-2.jpg);")
+	.l__project(style="background-image:url(/images/styleguide-background-2.jpg);", data-js-project-section)
 		.l__project__content-wrapper
-			.project-item.l__floating-box(style="top:5rem; left:13rem; width:23rem;")
+			.project-item.l__floating-box(style="top:5rem; left:13rem;")
 				h2 Now let's try images, of bears, I guess.
-			.project-item.l__floating-box(style="top:5rem; left:13rem; width:23rem;")
+			.project-item.l__floating-box(style="top:7rem; left:13rem; width:23rem;")
 				figure
 					img(src="https://placebear.com/300/200", alt="")
 					figcaption this is an image with a caption
-			.project-item.l__floating-box(style="top:5rem; left:13rem; width:23rem;")
 				h3 this is just an image.
 				img(src="https://placebear.com/300/200", alt="")

@@ -59,10 +59,11 @@ section.l__project:first-of-type, section.structure-entries.builder-entries:firs
   float: left;
   width: 24rem;
   z-index: 2;
-  display: none; }
+  visibility: hidden; }
 
-.l__fixed-box.js-visible {
-  display: block; }
+.js-visible .l__fixed-box,
+.js-visible.l__fixed-box {
+  visibility: visible; }
 
 /*
 @include font-face($primary-font, '/fonts/redacted/redacted-script-regular', normal);

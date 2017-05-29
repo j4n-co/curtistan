@@ -58,8 +58,9 @@ section.l__project:first-of-type {
 	float: left;
 	width: 24rem;
 	z-index: 2;
-	display: none;
+	visibility: hidden;
 }
-.l__fixed-box.js-visible {
-	display: block;
+.js-visible .l__fixed-box,
+.js-visible.l__fixed-box  {
+	visibility: visible;
 }

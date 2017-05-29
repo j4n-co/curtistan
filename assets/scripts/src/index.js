@@ -1,59 +1,31 @@
-import Waypoint from '../../node_modules/waypoints/lib/noframework.waypoints.js';
+import {} from '../../node_modules/waypoints/lib/noframework.waypoints.js';
+import jQuery from 'jquery';
 
-var descriptionContainer = document.querySelector('[data-js-fixed-items]');
-var descriptionOffset = descriptionContainer.getBoundingClientRect().top;
-var descriptionContents = document.querySelectorAll('[data-js-fixed-item]');
-var descriptionContentIndexes = [];
+var $ = jQuery;
 
-var projectSections = document.querySelectorAll('[data-js-project-section]');
+$('document').ready( () => {
+	$( '[data-js-project-section]' ).each( (index, project) => {
+		new window.Waypoint({
+			element: project,
+			handler: function(direction) {
+				$( '[data-js-project-section]' ).removeClass('js-visible');
+				if ( direction === 'down' ) {
+					$(this.element).addClass('js-visible');
+				} else {
+					$(this.element).prev().addClass('js-visible');
 
-var activeProject;
-descriptionContents.forEach( function( el ) { descriptionContentIndexes.push( el.dataset.pageid ) } )
+				}
+				 console.log(this.element)
+			},
+			offset: function() {
+				let childEl = $(this.element).find('[data-js-fixed-item]');
+				let r = $('[data-js-fixed-item]').first().offset().top;
+				if ( childEl[0] ) {
+					r = childEl.offset().top
+				}
+				return r;
+			}
+		});
+	});
 
-
-function activeSectionChanged(element){
-if (activeProject === element ) {
-return;
-}
-activeProject = element;
-var projectIndex = activeProject.dataset.pageid;
-var descriptionIndex = descriptionContentIndexes.indexOf( projectIndex )
-var activeDescription = descriptionContents[ descriptionIndex ];
-descriptionContents.forEach(function( el, i ) {
-if ( i !== descriptionIndex ) {
-        el.classList.remove('js-visible')
-}
-})
-activeDescription.classList.add('js-visible');
-}
-
-projectSections.forEach(function(project){
-new window.Waypoint({
-element: project,
-handler: function(direction) {
-        if (direction === 'up' && this.previous() ) {
-        activeSectionChanged( this.previous().element )
-        } else {
-        activeSectionChanged( this.element )
-        }
-},
-group: 'project-sections',
-offset: descriptionOffset
-});
-});
-
-
-
-var absoluteItemContainers = document.querySelectorAll('[data-js-project-section]');
-var absoluteItemClass = '.builder-item';
-
-absoluteItemContainers.forEach(function( item ){
-var containerBoundsTop = item.offsetTop + item.offsetHeight;
-item.querySelectorAll(absoluteItemClass).forEach(function(el){
-var itemBoundsTop = el.offsetTop + el.offsetHeight;
-if ( itemBoundsTop > containerBoundsTop ) {
-        item.style['min-height'] = itemBoundsTop + 'px';
-}
-
-});
 })
