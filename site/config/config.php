@@ -20,6 +20,9 @@ c::set('license', 'put your license key here');
 c::set('imageset.license', 'IMGST1-4f719777a99e8a4934d52d70b5326be9');
 c::set('imagekit.license', 'IMGKT1-9eed4e7d212e9bb4eb4d1af500b63500');
 
+c::set('imagekit.optimize', true);
+c::set('imagekit.gifsicle.bin', '~/bin/gifsicle-1.88/src/gifsicle');
+
 /*
 
 ---------------------------------------
