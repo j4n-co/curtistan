@@ -9,7 +9,7 @@
     </div>
   </footer>
 
-  <script src="/assets/scripts/dist/index.dev.bundle.js" async></script>
+  <script src="/assets/scripts/dist/index.js" async></script>
 
 </body>
 </html>

@@ -17,6 +17,9 @@ for more information: http://getkirby.com/license
 
 c::set('license', 'put your license key here');
 
+c::set('imageset.license', 'IMGKT1-9eed4e7d212e9bb4eb4d1af500b63500');
+c::set('Imagekit.license', 'IMGKT1-9eed4e7d212e9bb4eb4d1af500b63500');
+
 /*
 
 ---------------------------------------
