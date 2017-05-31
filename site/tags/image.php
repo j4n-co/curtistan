@@ -71,7 +71,7 @@ kirbytext::$tags['image'] = array(
           'title'  => $tag->attr('title'),
           'target' => $tag->target()
         ))
-      ));
+      ),  array( 'class'  =>  'image-link' ) );
 
     };
 

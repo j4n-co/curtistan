@@ -133,9 +133,9 @@ section.l__project:first-of-type, section.structure-entries.builder-entries:firs
     word-wrap: break-word; }
   .project-item p:last-of-type {
     padding-bottom: 1rem; }
-  .project-item .image-link {
+  .project-item .image-link a {
     background-image: none; }
-  .project-item .image-link:hover {
+  .project-item .image-link:hover a {
     background-image: none; }
   .project-item img {
     padding-bottom: 1rem;
