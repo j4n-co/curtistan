@@ -8,5 +8,5 @@
 
 ?>
 <div class="project-item l__floating-box" style="<?= $itemStyles?>">
-    <?=  $data->text()->kirbytext() ?>
+    <?= $data->text()->kirbytext() ?>
 </div>

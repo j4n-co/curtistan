@@ -210,6 +210,10 @@ figcaption {
     word-wrap: break-word; }
   .project-item p:last-of-type {
     padding-bottom: 1rem; }
+  .project-item .image-link {
+    background-image: none; }
+  .project-item .image-link:hover {
+    background-image: none; }
   .project-item img {
     padding-bottom: 1rem;
     max-width: 100%; }

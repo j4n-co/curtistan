@@ -64,11 +64,13 @@ kirbytext::$tags['image'] = array(
         $href = $link;
       }
 
-      return html::a(url($href), $image, array(
-        'rel'    => $tag->attr('rel'),
-        'class'  => $tag->attr('linkclass'),
-        'title'  => $tag->attr('title'),
-        'target' => $tag->target()
+      return html::tag('div', (
+        html::a(url($href), $image, array(
+          'rel'    => $tag->attr('rel'),
+          'class'  => $tag->attr('linkclass'),
+          'title'  => $tag->attr('title'),
+          'target' => $tag->target()
+        ))
       ));
 
     };
